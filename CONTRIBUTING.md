@@ -1,52 +1,25 @@
 # Contributing to Synctax
 
-Thank you for your interest in improving Synctax! Contributions, palette refinements, and new wallpaper additions are welcome.
+Thanks for dropping by — contributions are appreciated whether it's a color tweak, a new wallpaper, or a fix for an app you use that isn't themed yet.
 
----
+## Design principles
 
-## 🎨 Design Philosophy & Principles
+Keep these in mind and PRs will line up cleanly:
 
-1. **True Pitch-Black Foundation**:
-   - Primary `background` is strictly `#000000`.
-   - Four distinct surface depths:
-     - `darker_background`: `#070707` (deepest inset)
-     - `dark_background`: `#090909` (surface cards)
-     - `background`: `#000000` (canvas)
-     - `lighter_background`: `#1a1a1a` (elevated / hover tiles)
+1. **Black is black.** The base `background` stays `#000000`. The surface steps are `#070707` (deepest), `#090909` (cards), and `#1a1a1a` (elevated). Don't flatten these.
+2. **One accent, used consistently.** Electric blue `#1e66f5` for borders, focus rings, links, and active states. Don't add a second accent color to compete with it.
+3. **Readability first.** Text luminance runs `e6e9f0` → `cdd6f4` → `bcc0cc` → `9ca0b0`. Any semantic accent (reds, greens, yellows) must pass WCAG AA on `#000000`.
+4. **Wallpapers** should complement the blue/black palette without adding visual noise.
 
-2. **Single Electric Accent**:
-   - The primary accent is electric blue (`#1e66f5`).
-   - Window borders, selection highlights, active pills, and focus rings share this single token.
-
-3. **High-Contrast Legibility**:
-   - Text follows a strictly measured 4-step near-white luminance hierarchy:
-     - `bright_foreground`: `#e6e9f0` (headings, active titles)
-     - `foreground`: `#cdd6f4` (standard body text)
-     - `light_foreground`: `#bcc0cc` (subtext)
-     - `dark_foreground`: `#9ca0b0` (muted labels)
-   - Every semantic accent (red `#d20f39`, green `#40a02b`, yellow `#df8e1d`) must pass WCAG AA contrast standards against `#000000`.
-
-4. **Curated Wallpaper Harmony**:
-   - Backgrounds should complement the deep blue / pure black tones without distracting visual noise.
-
----
-
-## 🛠️ Testing Changes
-
-Test the theme locally before submitting pull requests:
+## Testing locally
 
 ```bash
-# Link or install locally
-omarchy theme set synctax
-
-# Cycle through wallpapers
-omarchy theme bg next
+omarchy theme set synctax        # link/install locally
+omarchy theme bg next            # cycle wallpapers
 ```
 
----
+## PR checklist
 
-## 📝 Pull Request Guidelines
-
-1. **Clear Commit Messages**: Use concise, imperative commit messages (e.g. `Adjust selection contrast in colors.toml`).
-2. **Palette Verification**: Ensure any modified hex codes adhere to the design principles above.
-3. **No Bloat**: Keep wallpaper file sizes optimized for high-resolution displays.
+- [ ] Commit messages are concise and describe the what, not the why
+- [ ] New hex codes follow the principles above
+- [ ] Wallpapers are sized appropriately (no unnecessary bloat)

@@ -1,27 +1,27 @@
-name: "🐛 Bug Report"
-description: "Report a color contrast, wallpaper, or theming issue with Synctax"
+name: "Bug Report"
+description: "Report a color, wallpaper, or theming issue"
 title: "[Bug]: "
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to report an issue! Please check existing issues before submitting.
+        Thanks for flagging something. Check existing issues first if you can.
 
   - type: textarea
     id: description
     attributes:
-      label: Description
-      description: A clear and concise description of what the theming issue is.
-      placeholder: "In Kitty / GTK / Alacritty, text contrast is low when..."
+      label: What's wrong
+      description: What isn't working as expected?
+      placeholder: "In Kitty / GTK / Alacritty, text contrast is too low when..."
     validations:
       required: true
 
   - type: textarea
     id: affected_app
     attributes:
-      label: Affected Application
-      description: Which application or component displays the issue? (e.g. Hyprland border, Better Bar, Ghostty, Neovim, GTK4)
+      label: Where it's broken
+      description: Which app or component shows the issue?
       placeholder: "Hyprland borders / Kitty terminal / GTK dialog"
     validations:
       required: true
@@ -29,8 +29,8 @@ body:
   - type: textarea
     id: expected
     attributes:
-      label: Expected Behavior
-      description: What color or contrast level did you expect?
+      label: What you expected
+      description: What color or contrast did you want?
     validations:
       required: true
 
@@ -38,7 +38,7 @@ body:
     id: system_info
     attributes:
       label: Environment
-      description: Output of `hyprctl version` and Omarchy version.
+      description: Output of `hyprctl version` and your Omarchy version.
       render: shell
       placeholder: |
         Omarchy: 4.x
