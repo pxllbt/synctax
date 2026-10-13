@@ -32,16 +32,6 @@ Instead of washed-out charcoal or muddy greys, Synctax delivers true OLED black 
 
 ---
 
-## 📸 Preview
-
-### Desktop Experience
-<img src="preview.png" alt="Synctax Desktop Preview" width="100%" />
-
-### Palette Reference
-<img src="palette-check.png" alt="Palette Reference" width="100%" />
-
----
-
 ## ✨ Features
 
 - **True Pitch-Black Foundation**: Built on pure `#000000` black canvas with 4 subtle surface depths for cards, dialogs, and elevated controls.
