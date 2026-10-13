@@ -2,7 +2,7 @@
 
 # Synctax
 
-**A refined true-black Omarchy theme with an electric blue accent and curated 4K wallpapers.**
+**A refined true-black Omarchy theme with an electric blue accent, muted selection highlights, and curated 4K wallpapers.**
 
 [![CI](https://img.shields.io/github/actions/workflow/status/pxllbt/synctax/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/pxllbt/synctax/actions)
 [![Omarchy Theme](https://img.shields.io/badge/Omarchy%20Theme-4.x-1e66f5?style=flat-square)](https://omarchy.org/themes)
@@ -28,14 +28,15 @@
 
 **Synctax** is an official desktop theme for [Omarchy](https://omarchy.org), engineered around an uncompromising `#000000` pitch-black foundation. 
 
-Instead of washed-out charcoal or muddy greys, Synctax delivers true OLED black surfaces with four distinct elevation depths, a carefully calibrated near-white text luminance hierarchy, and a single electric blue accent (`#1e66f5`) across active window borders, interactive selections, and focal UI elements. Eight high-contrast semantic accent colors provide immediate clarity for syntax highlighting, warnings, errors, and system status.
+Instead of washed-out charcoal or muddy greys, Synctax delivers true OLED black surfaces with four distinct elevation depths, a carefully calibrated near-white text luminance hierarchy, and a single electric blue accent (`#1e66f5`) across active window borders, focus rings, and focal UI elements. Text selections and highlights use the muted palette tone (`#acb0be`) for clean contrast against the deep black background. Eight high-contrast semantic accent colors provide immediate clarity for syntax highlighting, warnings, errors, and system status.
 
 ---
 
 ## ✨ Features
 
 - **True Pitch-Black Foundation**: Built on pure `#000000` black canvas with 4 subtle surface depths for cards, dialogs, and elevated controls.
-- **Unified Electric Accent**: Single electric blue (`#1e66f5`) accent color unifying window borders, selections, and interactive states.
+- **Unified Electric Accent**: Single electric blue (`#1e66f5`) accent color for active window borders, focus rings, and focal UI elements.
+- **Muted Selection Highlights**: Text selections use the soft gray palette tone (`#acb0be`) for clean contrast on the black foundation.
 - **Measured Text Hierarchy**: 4-step near-white luminance scale (`#e6e9f0`, `#cdd6f4`, `#bcc0cc`, `#9ca0b0`) tested for comfortable, eye-strain-free reading on black.
 - **Hyprland Aligned**: Active window borders glow with `rgba(1e66f5ee)` matching status bar and terminal highlights.
 - **Curated 4K Wallpaper Pack**: Ships with three backgrounds designed to harmonize with the theme palette (`omarchy theme bg next`).
@@ -73,7 +74,7 @@ Or open the Omarchy menu (`Super + Ctrl + Shift + Space`):
 | `light_foreground` | ![#bcc0cc](https://placehold.co/18x18/bcc0cc/bcc0cc.png) | `#bcc0cc` | Medium Emphasis (secondary text, labels) |
 | `dark_foreground` | ![#9ca0b0](https://placehold.co/18x18/9ca0b0/9ca0b0.png) | `#9ca0b0` | Low Emphasis (subtext, line numbers, hints) |
 | `accent` | ![#1e66f5](https://placehold.co/18x18/1e66f5/1e66f5.png) | `#1e66f5` | Electric Blue (active borders, focus rings) |
-| `selection` | ![#1e66f5](https://placehold.co/18x18/1e66f5/1e66f5.png) | `#1e66f5` | Text Selection & Active Highlights |
+| `selection` | ![#acb0be](https://placehold.co/18x18/acb0be/acb0be.png) | `#acb0be` | Text Selection & Active Highlights |
 | `muted` | ![#acb0be](https://placehold.co/18x18/acb0be/acb0be.png) | `#acb0be` | Overlay & Inactive Borders |
 | `red` | ![#d20f39](https://placehold.co/18x18/d20f39/d20f39.png) | `#d20f39` | Coral Red (errors, critical badges) |
 | `yellow` | ![#df8e1d](https://placehold.co/18x18/df8e1d/df8e1d.png) | `#df8e1d` | Warm Amber (warnings, attention alerts) |
