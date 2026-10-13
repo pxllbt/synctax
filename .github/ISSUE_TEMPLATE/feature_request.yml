@@ -1,0 +1,26 @@
+name: "✨ Feature Request"
+description: "Suggest a color adjustment, new wallpaper, or application variant for Synctax"
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea or wallpaper suggestion for Synctax? We'd love to hear it!
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Motivation
+      description: What would you like to improve or add?
+      placeholder: "I'd like to suggest a wallpaper / app theme support for..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Enhancement
+      description: Detailed description of the suggested enhancement.
+    validations:
+      required: true

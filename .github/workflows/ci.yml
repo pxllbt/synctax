@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  test:
+    name: Validate Theme Syntax & Assets
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Validate Theme Metadata & Palette
+        run: |
+          python3 - <<'EOF'
+          import tomllib, yaml, os
+
+          # Validate colors.toml
+          with open("colors.toml", "rb") as f:
+              colors = tomllib.load(f)
+          assert colors["mode"] == "dark", "Mode must be dark"
+          assert colors["background"] == "#000000", "Background must be pure black #000000"
+          assert colors["accent"] == "#1e66f5", "Accent must be electric blue #1e66f5"
+          for key in ["foreground", "dark_background", "darker_background", "lighter_background", "red", "green", "blue", "yellow"]:
+              assert key in colors, f"Missing required color token: {key}"
+
+          # Validate .omarchy-theme.yml
+          with open(".omarchy-theme.yml", "r") as f:
+              meta = yaml.safe_load(f)
+          assert meta["name"] == "Synctax", "Theme name must be Synctax"
+          assert meta["category"] == "dark", "Category must be dark"
+          assert os.path.exists(meta["preview"]), f"Preview image {meta['preview']} missing"
+
+          # Validate backgrounds
+          for bg in ["backgrounds/gradient.jpg", "backgrounds/void.png", "backgrounds/nebula.png"]:
+              assert os.path.exists(bg), f"Wallpaper {bg} missing"
+
+          print("All theme syntax and asset checks passed!")
+          EOF
