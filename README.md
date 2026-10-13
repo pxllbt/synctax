@@ -16,7 +16,7 @@
 
 <br/>
 
-*Pitch-Black Depth · Electric Blue Accent · Studio Quality Typography*
+*Pitch-Black Depth · Electric Blue Accent · Muted Selection · Studio Quality Typography*
 
 [Overview](#-overview) • [Preview](#-preview) • [Features](#-features) • [Installation](#-installation) • [Palette](#-color-palette) • [Wallpapers](#-curated-wallpapers) • [Contributing](#-contributing)
 
