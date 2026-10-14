@@ -45,7 +45,7 @@ jobs:
           assert os.path.exists(meta["preview"]), f"Preview image {meta['preview']} missing"
 
           # Validate backgrounds
-          for bg in ["backgrounds/gradient.jpg", "backgrounds/void.png", "backgrounds/nebula.png"]:
+          for bg in ["backgrounds/gradient.jpg", "backgrounds/void.webp", "backgrounds/nebula.webp"]:
               assert os.path.exists(bg), f"Wallpaper {bg} missing"
 
           print("All theme syntax and asset checks passed!")
